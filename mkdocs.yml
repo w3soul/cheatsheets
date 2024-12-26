@@ -3,15 +3,60 @@ site_url: https://github.com/w3soul/cheatsheets
 theme:
   name: material
 
-nav:
-  - Home: index.md
-  - Notes:
-      - Note 1: cheatsheets/linux/find.md
-      - Note 2: cheatsheets/linux/sed.md
+site_name: Notes
+site_description: 'Your notes and documentation'
+site_url: https://github.com/w3soul/cheatsheets
+repo_url: https://github.com/w3soul/cheatsheets
+edit_uri: blob/main/docs/
+
+theme:
+  name: material
+  custom_dir: overrides
+  color_mode: auto
+  user_color_mode_toggle: true
+  icon:
+    repo: fontawesome/brands/github
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+extra_css:
+  - custom.css
 
 markdown_extensions:
-  - toc:
-      permalink: true
+  - def_list
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - tables
   - admonition
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - attr_list
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
 
+plugins:
+  - search
+  - git-revision-date-localized
+  - social
+
+nav:
+  - Home: index.md
+  - Getting Started: getting-started.md
+  - Documentation:
+      - Section 1: section1.md
+      - Section 2: section2.md
+      - Section 3: section3.md
