@@ -1,0 +1,17 @@
+site_name: My Notes Documentation
+site_url: https://github.com/w3soul/cheatsheets
+theme:
+  name: material
+
+nav:
+  - Home: index.md
+  - Notes:
+      - Note 1: cheatsheets/linux/find.md
+      - Note 2: cheatsheets/linux/sed.md
+
+markdown_extensions:
+  - toc:
+      permalink: true
+  - tables
+  - admonition
+
